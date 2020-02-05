@@ -6,10 +6,12 @@ grant all privileges on arduino.* to 'sample'@'localhost';
 use arduino;
 
 create table data_tb(
+	id		int primary key not null auto_increment,
 	light 	integer,
-	dt		datetime
+	dt		TIMESTAMP not null DEFAULT NOW()
 );
 
 #더미데이터
-insert into data_tb(light,dt) values('234',now());
+#insert into data_tb(light) values('234');
+#insert into data_tb(light) values('6');
 select * from data_tb;

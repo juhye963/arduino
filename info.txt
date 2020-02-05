@@ -1,0 +1,14 @@
+https://www.facebook.com/doyouknowarduino/videos/491839614333641/
+
+조도센서 LCD출력
+
+https://pinkwink.kr/1230
+
+python으로 센서값 그래프 그리기
+
+필요환경
+# 아두이노 스케치
+# 아나콘다
+# mysql
+# pip install pyserial
+# python3 -m pip install PyMySQL
