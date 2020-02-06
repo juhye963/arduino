@@ -3,33 +3,29 @@ import pymysql
  
 # 접속
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='password', db='arduino', charset='utf8')
- 
-# 커서 가져오기
-cursor = db.cursor()
- 
-# SQL 문 만들기
-sql = '''insert into data_tb(light) values('555');'''
- 
-# 실행하기
-result=cursor.execute(sql)
- 
-# DB에 Complete 하기
-db.commit()
- 
-# DB 연결 닫기
-db.close()
 
-
-if result:
+try:
     cursor = db.cursor()
-    query = '''select * from data_tb;'''
-    cursor.execute(query)
+    for num in range(200, 210):
+        sql = "INSERT INTO data_tb(light) values("+str(num)+");"
+        print(sql)
+        cursor.execute(sql)
     db.commit()
+finally:
     db.close()
-else:
-    print("unsuccessful")
+
+try:
+    cursor = db.cursor()
+    sql = "SELECT * FROM data_tb"
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    for row_data in result:
+        print(row_data[0])
+        print(row_data[1])
+        print(row_data[2])
+        print(row_data[3])        
+finally:
+    db.close()
 
 ##https://www.fun-coding.org/mysql_basic6.html
 ##https://pymysql.readthedocs.io/en/latest/user/examples.html
-
-
