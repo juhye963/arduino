@@ -14,7 +14,7 @@ max_points = 800
 line, =ax.plot(np.arange(max_points),np.ones(max_points,dtype=np.float)*np.nan,lw=2)
 
 def init():
-        return line,
+    return line,
 def animate(i):
     y = arduino.readline()
     y = y.decode()[:-2]
