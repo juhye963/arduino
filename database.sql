@@ -14,4 +14,3 @@ create table data_tb(
 #더미데이터
 #insert into data_tb(light) values('234');
 #insert into data_tb(light) values('6');
-select * from data_tb;
