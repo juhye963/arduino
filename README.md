@@ -23,18 +23,20 @@ Arduino Mini Project - 데이터의 활용
 * 조도센서의 값을 LCD로 출력하는 아두이노 회로
   * https://www.facebook.com/doyouknowarduino/videos/491839614333641/
   ![arduino_light_lcd](https://user-images.githubusercontent.com/59054012/75941865-2da3ab00-5ed4-11ea-8d39-08ccaf42f05e.gif)
-* CoolTermWin과 디지털 오실로스코프 프로그램 이용하여 데이터 txt로 축적
-  * 데이터를 저장할 때 일일이 버튼 눌러야함
-  * 실시간으로 데이터 쌓이지 않음
+* CoolTermWin과 디지털 오실로스코프 프로그램 이용하여 데이터 txt나 csv로 축적
+  * 장점 : 나중에 데이터분석으로 확장하기 좋음
+  * 단점 : 데이터를 저장할 때 일일이 버튼 눌러야함
+  * 문제점 : 실시간으로 데이터 쌓이지 않음
 
 ***
 
 > ### 02.04 : python으로 실시간 데이터 그래프
 * 파일명 **_getdata.py_**
-* pyserial과 matplotlib 이용하여 실시간 데이터 그래프 구현
+* **pyserial**과 **matplotlib** 이용하여 실시간 데이터 그래프 구현
 
 ![python_graph](https://user-images.githubusercontent.com/59054012/75942033-b3bff180-5ed4-11ea-9be0-ee7518817881.png)
 
+* 좋은점 : 실시간으로 데이터가 움직이는 것을 볼 수 있음(그래프 움직임)
 * 문제점 : 실시간으로 시각화는 하였으나 데이터를 저장(축적)하지 못함.
 
 ***
@@ -42,7 +44,7 @@ Arduino Mini Project - 데이터의 활용
 > ### 02.05~02.06 : python으로 DB연결 공부, 실습
 * 파일명 **_database.sql pymysqltest2.py pymysqltest3.py_**
 * 위의 문제 해결을 위해 DB에 데이터를 저장하고 웹에서 시각화하는 플랜
-* Python으로 아두이노에서 가져온 데이터를 DB에 저장하기 위해 pymysql 모듈에 대해 공부
+* Python으로 아두이노에서 가져온 데이터를 DB에 저장하기 위해 **pymysql** 모듈에 대해 공부
 ```
 python3 -m pip install PyMySQL ## 파이선에 모듈 설치
 ```
@@ -54,7 +56,19 @@ python3 -m pip install PyMySQL ## 파이선에 모듈 설치
 
 ![realdata_dbconnect](https://user-images.githubusercontent.com/59054012/75942058-c63a2b00-5ed4-11ea-816d-fb4f449e3201.png)  
 
-* 데이터베이스에 저장한 데이터들을 PHP에서 PDO객체를 사용하여 가져와서 talbe 태그를 이용하여 표로 시각화하였다.  
+* 데이터베이스에 저장한 데이터들을 PHP에서 **PDO객체**를 사용하여 가져와서 table 태그를 이용하여 표로 시각화하였다.  
   
   ![web_visualize](https://user-images.githubusercontent.com/59054012/75942072-cdf9cf80-5ed4-11ea-8cd5-9171fca1b1bc.png)  
+  
+(위의 사진은 프로젝트 정리를 위해 나중에 찍은 사진이기에 받아온 데이터가 다르다. 온도데이터)
+
+***
+
+마무리
+--------
+* 시각화를 표가 아닌 **그래프**로 한다면 더 나을 것 같다.
+* 로컬 서버에서 작업했기 때문에 외부에서는 값을 확인할 수 없다.
+  * 추후 **웹서버를 구축**하여 그곳에 두면 활용성이 더 높아질 것 같다.
+* **와이파이 실드**나 **esp칩**을 이용하는 방법을 추천받았다.
+  * 모듈을 따로 구입해야 하기에 주어진 환경 안에서 원하는 것을 구현하는 쪽으로 진행했지만 다음에는 위의 방법을 활용하는 것도 좋을 것 같다.
   
