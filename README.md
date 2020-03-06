@@ -23,7 +23,7 @@ Arduino Mini Project - 데이터의 활용
 * 조도센서의 값을 LCD로 출력하는 아두이노 회로
   * https://www.facebook.com/doyouknowarduino/videos/491839614333641/
   ![arduino_light_lcd](https://user-images.githubusercontent.com/59054012/75941865-2da3ab00-5ed4-11ea-8d39-08ccaf42f05e.gif)
-* CoolTermWin과 디지털 오실로스코프 프로그램 이용하여 데이터 txt나 csv로 축적
+* CoolTermWin과 디지털 오실로스코프 프로그램(Serial-Oscilloscope-v1.5) 이용하여 데이터 txt나 csv로 축적 
   * 장점 : 나중에 데이터분석으로 확장하기 좋음
   * 단점 : 데이터를 저장할 때 일일이 버튼 눌러야함
   * 문제점 : 실시간으로 데이터 쌓이지 않음
@@ -33,6 +33,7 @@ Arduino Mini Project - 데이터의 활용
 > ### 02.04 : python으로 실시간 데이터 그래프
 * 파일명 **_getdata.py_**
 * **pyserial**과 **matplotlib** 이용하여 실시간 데이터 그래프 구현
+  * https://pinkwink.kr/1230 참고함
 
 ![python_graph](https://user-images.githubusercontent.com/59054012/75942033-b3bff180-5ed4-11ea-9be0-ee7518817881.png)
 
