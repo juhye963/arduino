@@ -2,9 +2,11 @@ Arduino Mini Project - 데이터의 활용
 ===================
 의도(개발계기)
 ----------
-* LCD나 시리얼모니터의 센서값을 활용할 방법 모색
-* 텍스트(csv,exel)로 데이터저장, 혹은 DB에 축적, 시각화, 데이터분석 등의 방향으로 확장 가능성
-* 텍스트로 데이터를 저장하는 것부터 시작
+* 실내 조도를 파악하여 LCD로 시각화, IoT장비로서 어떤 방식으로 유용하게 쓰일 수 있는지 모색
+* 텍스트(csv,exel)로 데이터저장, 혹은 DB에 축적, 웹에 시각화, 데이터분석 등의 방향으로 확장 가능성이 있음.
+* 텍스트로 데이터를 저장하는 것부터 시작하여 실시간으로 데이터를 볼 수 있도록 시각화하는 것까지 진행함.
+* 실시간 시각화 이후 일상에 유용하게 활용할 방안 검토할 계획 세움.
+  * ex) 전등 외부에서 on/off 등
 ***
 개발환경
 -------
@@ -21,6 +23,7 @@ Arduino Mini Project - 데이터의 활용
 > ### 01.31~02.03 : 아두이노 회로구성
 * 파일명 **_sensor_**
 * 조도센서의 값을 LCD로 출력하는 아두이노 회로
+  * 
   * https://www.facebook.com/doyouknowarduino/videos/491839614333641/
   ![arduino_light_lcd](https://user-images.githubusercontent.com/59054012/75941865-2da3ab00-5ed4-11ea-8d39-08ccaf42f05e.gif)
 * CoolTermWin과 디지털 오실로스코프 프로그램(Serial-Oscilloscope-v1.5) 이용하여 데이터 txt나 csv로 축적 
@@ -61,7 +64,7 @@ python3 -m pip install PyMySQL ## 파이선에 모듈 설치
   
   ![web_visualize](https://user-images.githubusercontent.com/59054012/75942072-cdf9cf80-5ed4-11ea-8cd5-9171fca1b1bc.png)  
   
-(위의 사진은 프로젝트 정리를 위해 나중에 찍은 사진이기에 받아온 데이터가 다르다. 온도데이터)
+(위의 사진은 프로젝트 정리를 위해 나중에 찍은 사진이기에 받아온 데이터가 다르다. 센서데이터를 바꾼 이유에 대해서는 버전 2.0에 설명.)
 
 ***
 
